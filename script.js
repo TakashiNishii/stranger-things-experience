@@ -86,6 +86,4 @@ grupoTextoSplit.forEach((textoUnicoSplit) => {
 })
 
 
-
-
 // Pré Loader
