@@ -64,6 +64,27 @@ gsap.from("footer", {
 })
 
 // Letras Surgindo
+// Usar SplitText para dividir o texto em letras
+const grupoTextoSplit = document.querySelectorAll(".textoSplit");
+
+// Anima cada elemento do agrupamento para garantir que todos sejam animados sem estar ligado um ao outro
+grupoTextoSplit.forEach((textoUnicoSplit) => {
+  const split = SplitText.create(textoUnicoSplit, {
+    type: "lines, words, chars", // dividir em palavras e caracteres
+    mask: "lines" // aplicar máscara para animação
+  });
+
+  gsap.from(split.chars, {
+    y: 40,
+    opacity: 0,
+    duration: .3,
+    stagger: .03,
+    scrollTrigger: {
+      trigger: textoUnicoSplit,
+    }
+  });
+})
+
 
 
 
