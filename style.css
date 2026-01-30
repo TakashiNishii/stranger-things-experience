@@ -199,6 +199,9 @@ ul {
 .secaoObrigado {
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background-color: #0C0102;
+  z-index: 2;
 
   h2 {
     margin-bottom: 40px;
